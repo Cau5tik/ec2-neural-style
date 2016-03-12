@@ -3,5 +3,10 @@
 sudo apt-get update
 sudo apt-get install git
 git clone https://github.com/Cau5tik/ec2-neural-style.git
-chmod +x ./ec2-neural-style/setup_neural-style.sh
+cd ec2-neural-style
+chmod +x setup_neural-style.sh
+chmod +x process_images.sh
+chmod +x gpu_task.sh
+mv gpu* ~/neural-style/
+mv process_images.sh ~/neural-style/
 ./ec2-neural-style/setup_neural-style.sh
