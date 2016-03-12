@@ -7,4 +7,4 @@ cd ec2-neural-style
 chmod +x setup_neural-style.sh
 chmod +x process_images.sh
 chmod +x gpu_task.sh
-./ec2-neural-style/setup_neural-style.sh
+sudo ~/ec2-neural-style/setup_neural-style.sh
