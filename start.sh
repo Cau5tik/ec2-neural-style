@@ -6,6 +6,8 @@ sudo mv .[a-z]* /mnt
 cd /home
 sudo rm -rf ubuntu
 sudo ln -s /mnt ubuntu
+sudo chown ubuntu:ubuntu /mnt
+
 
 cd ~/ec2-neural-style
 chmod +x *.sh
