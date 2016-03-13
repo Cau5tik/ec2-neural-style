@@ -5,13 +5,13 @@ cd /home/ubuntu/neural-style
 aws s3 sync s3://kiegan-is-my-bff-forever/content/ ./content
 aws s3 sync s3://kiegan-is-my-bff-forever/style/ ./style
 
-outputFolder="output-`date +%H-%m-%S`"
+~/neural-style/gpu_task.sh 0 1 "gpu0" &
+#~/neural-style/gpu_task.sh 1 700 "gpu1" &
+#~/neural-style/gpu_task.sh 2 700 "gpu2" &
+#~/neural-style/gpu_task.sh 3 700 "gpu3" &
 
-mkdir ${outputFolder}
+while [ `ps aux | grep gpu_task.sh | wc --lines` != "1" ]; do
+    sleep 10
+done
 
-~/neural-style/gpu_task.sh 0 500 ${outputFolder} 
-#~/neural-style/gpu_task.sh 1 500 ${outputFolder} &
-#~/neural-style/gpu_task.sh 2 500 ${outputFolder} &
-#~/neural-style/gpu_task.sh 3 500 ${outputFolder} &
-
-echo "Finished"
+sudo shutdown -h now
