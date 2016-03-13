@@ -19,4 +19,3 @@ cd ~/ec2-neural-style/
 mv gpu* ~/neural-style/
 mv process_images.sh ~/neural-style/
 
-~/neural-style/process_images.sh
