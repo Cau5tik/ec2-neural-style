@@ -1,7 +1,13 @@
 #!/bin/bash
 
-sudo apt-get update
-git clone https://github.com/Cau5tik/ec2-neural-style.git
+sudo chown -R ubuntu:ubuntu /home/ubuntu
+cd /home/ubuntu
+sudo mv * /mnt
+sudo mv .[a-z]* /mnt
+cd /home
+sudo rm -rf ubuntu
+sudo ln -s /mnt ubuntu
+
 cd ec2-neural-style
 chmod +x setup_neural-style.sh
 chmod +x process_images.sh
