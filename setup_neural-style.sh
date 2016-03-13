@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo chown -R ubuntu:ubuntu /home/ubuntu
+sudo apt-get update
 sudo apt-get install libprotobuf-dev protobuf-compiler -y
 #curl -sk https://raw.githubusercontent.com/torch/ezinstall/master/install-luajit+torch |  bash
 #luarocks install loadcaffe
