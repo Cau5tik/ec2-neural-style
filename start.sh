@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sudo chown ubuntu:ubuntu /mnt
-sudo chown -R ubuntu:ubuntu /home/ubuntu
 cd /home/ubuntu
 sudo mv * /mnt
 sudo mv .[a-z]* /mnt

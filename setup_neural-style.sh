@@ -7,7 +7,9 @@ sudo apt-get install libprotobuf-dev protobuf-compiler -y
 cd ~/
 git clone https://github.com/szagoruyko/loadcaffe.git
 cd loadcaffe
+sudo chown -R ubuntu:ubuntu ~/torch/
 luarocks build loadcaffe-1.0-0.rockspec
+sudo chown -R root:root ~/torch/
 
 cd ~/
 git clone https://github.com/jcjohnson/neural-style.git
